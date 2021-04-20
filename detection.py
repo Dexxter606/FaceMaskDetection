@@ -31,10 +31,10 @@ while cap.isOpened():
 
 
     # convert to grayscale
-    #gray_img = cv2.cvtColor(color_img , cv2.COLOR_BGR2GRAY)
+    gray_img = cv2.cvtColor(color_img , cv2.COLOR_BGR2GRAY)
 
     # Detect the face
-    faces = face_cascade.detectMultiScale(color_img, 1.3 , 4)
+    faces = face_cascade.detectMultiScale(gray_img, 1.3 , 4)
 
     # take face the predict class mask or not mask then draw rectangle
     img_count = 0
